@@ -13,7 +13,7 @@ const languages = [{
 
 function App() {
   const onChangeLanguage = (lang) => {
-
+    window.open(lang.room, "_blank")
   }
   return (
     <div className="App">
@@ -25,7 +25,7 @@ function App() {
         <h2>Choose Language</h2>
         <div className="flags">
           {languages.map(lang => {
-            return <div key={lang.name  } className="language-flag" onClick={() => onChangeLanguage(lang.name)}>
+            return <div key={lang.name  } className="language-flag" onClick={() => onChangeLanguage(lang)}>
               <h3>{lang.name}</h3>
               <img src={lang.logo} alt={lang.name} />
             </div>
